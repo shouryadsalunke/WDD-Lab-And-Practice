@@ -120,3 +120,7 @@ The exact set of folders reflects the contents of the supplied lab archive; mino
 ## Repository purpose
 
 This repository brings together WDD classroom exercises and additional practice in one place for revision, experimentation, and demonstrating familiarity with foundational front-end web development. The original lab exercises and the additional projects are separated so that classroom examples remain distinguishable from later practice work.
+
+## Author
+
+Shourya Deepak Salunke
