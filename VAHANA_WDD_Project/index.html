@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAHANA | Find Your Drive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#home" class="logo">V<span>.</span> VAHANA</a>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#vehicles">Vehicles</a>
+            <a href="#about">About</a>
+            <a href="#bookings">My Bookings</a>
+        </nav>
+        <button id="loginButton" onclick="showLogin()">Login</button>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-text">
+                <p class="small-title">YOUR NEXT JOURNEY STARTS HERE</p>
+                <h1>Your Ride.<br><span>Your Rules.</span></h1>
+                <p>Find a car or bike for your next trip.<br>Simple booking. Clear daily prices.</p>
+                <a href="#vehicles" class="main-link">Explore Vehicles</a>
+            </div>
+        </section>
+
+        <section class="intro section">
+            <p class="small-title">WELCOME TO VAHANA</p>
+            <h2>Pick a ride that <span>fits your journey.</span></h2>
+            <p>From everyday rides to something special, choose a vehicle that works for you.</p>
+        </section>
+
+        <section class="filters" id="vehicles">
+            <div class="section-heading">
+                <div><p class="small-title">OUR COLLECTION</p><h2>Explore Vehicles</h2></div>
+                <p>Prices are estimates per day.</p>
+            </div>
+            <div class="filter-row">
+                <label for="searchInput">Search vehicles
+                    <input type="text" id="searchInput" placeholder="Try Porsche or bike">
+                </label>
+                <label for="typeFilter">Vehicle type
+                    <select id="typeFilter">
+                        <option value="All">All types</option>
+                        <option value="Car">Cars</option>
+                        <option value="SUV">SUVs</option>
+                        <option value="Bike">Bikes</option>
+                    </select>
+                </label>
+                <label for="priceFilter">Maximum daily price
+                    <select id="priceFilter">
+                        <option value="50000">Any budget</option>
+                        <option value="2000">Up to ₹2,000</option>
+                        <option value="5000">Up to ₹5,000</option>
+                        <option value="10000">Up to ₹10,000</option>
+                        <option value="20000">Up to ₹20,000</option>
+                    </select>
+                </label>
+                <button onclick="showVehicles()">Find Vehicles</button>
+            </div>
+            <div id="vehicleGrid" class="vehicle-grid"></div>
+            <p id="emptyMessage" class="message" style="display:none;">No vehicles match your search. Try changing the filters.</p>
+        </section>
+
+        <section class="about section" id="about">
+            <div><p class="small-title">THE VAHANA PROMISE</p><h2>Good roads.<br><span>Great stories.</span></h2></div>
+            <div class="about-item"><h3>01. Easy booking</h3><p>Choose your vehicle and travel dates in a few steps.</p></div>
+            <div class="about-item"><h3>02. More choice</h3><p>Find a vehicle for a city ride or a weekend away.</p></div>
+            <div class="about-item"><h3>03. Clear pricing</h3><p>See the estimated cost before you confirm a booking.</p></div>
+        </section>
+
+        <section class="booking section" id="bookingSection" style="display:none;">
+            <div class="section-heading"><div><p class="small-title">RESERVE YOUR RIDE</p><h2>Booking Details</h2></div><button class="secondary-button" onclick="closeBooking()">Back to vehicles</button></div>
+            <div class="booking-layout">
+                <div id="vehicleSummary" class="vehicle-summary"></div>
+                <form id="bookingForm" onsubmit="return confirmBooking()">
+                    <h3>Your Details</h3>
+                    <label for="customerName">Full name</label>
+                    <input type="text" id="customerName" placeholder="Enter your name" required>
+                    <label for="customerEmail">Email address</label>
+                    <input type="text" id="customerEmail" placeholder="you@example.com" required>
+                    <label for="pickupDate">Pick-up date</label>
+                    <input type="date" id="pickupDate" required>
+                    <label for="dropoffDate">Return date</label>
+                    <input type="date" id="dropoffDate" required>
+                    <label for="pickupLocation">Pick-up location</label>
+                    <input type="text" id="pickupLocation" placeholder="e.g. Chandigarh" required>
+                    <p class="total-line">Estimated total: <strong id="estimatedTotal">Choose dates</strong></p>
+                    <button type="submit">Confirm Booking</button>
+                    <p class="note">College project demonstration. No payment is collected.</p>
+                </form>
+            </div>
+        </section>
+
+        <section class="section bookings" id="bookings">
+            <div class="section-heading"><div><p class="small-title">YOUR ACTIVITY</p><h2>My Bookings</h2></div><button class="secondary-button" onclick="clearBookings()">Clear History</button></div>
+            <div id="bookingHistory"><p>No bookings saved yet.</p></div>
+        </section>
+
+        <section class="section contact" id="contact">
+            <p class="small-title">NEED A RIDE?</p><h2>Start your next journey with VAHANA.</h2>
+            <p>This is a student-made vehicle rental website prototype.</p>
+            <a href="#vehicles" class="main-link">Browse Vehicles</a>
+        </section>
+    </main>
+
+    <footer><a href="#home" class="logo">V<span>.</span> VAHANA</a><p>Different journeys. Same destination.</p><small>© 2026 VAHANA | WDD Project</small></footer>
+
+    <div id="loginBox" class="login-box" style="display:none;">
+        <div class="login-content">
+            <button class="close-button" onclick="hideLogin()">Close</button>
+            <p class="small-title">WELCOME TO VAHANA</p><h2>Login</h2>
+            <form onsubmit="return loginUser()">
+                <label for="loginName">Your name</label><input type="text" id="loginName" required>
+                <label for="loginEmail">Email address</label><input type="text" id="loginEmail" required>
+                <button type="submit">Continue</button>
+            </form>
+            <p class="note">Demo login only. No password or real account is used.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

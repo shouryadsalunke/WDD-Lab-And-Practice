@@ -1,0 +1,29 @@
+.external-section{
+    background-color: white;
+    width: 80%;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1)
+}
+.external-section h2 {
+    color: #1f4e79;
+    text-align: center;
+}
+.external-section{
+    color: #444;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.external-box{
+    background-color: #d6eaf8;
+    padding: 20px;
+    border-left: 6px solid #1f4e79;
+    margin-top: 15px
+}
+
+.external-button{
+    background-color: #1f4e79;
+    color: white;
+}

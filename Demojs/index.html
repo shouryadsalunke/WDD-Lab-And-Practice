@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--METHOD 1:-->
+<body>
+    <script>
+        function disp() {
+            document.getElementById("text").innerHTML = "Paragraph Changed";
+        }
+    </script>
+    <h1>This is an example of Document write method !!</h1>
+    <p id="text"></p>
+        <button onclick="disp()">Current paragraph</button>
+</body>
+</html>
+<!-- OR 
+METHOD: 2 
+USE A FUNCTION TO DISPLAY THE TEXT: 
+<body>
+    <script>
+        function disp() {
+            document.write("This is an example");
+        }
+    </script>
+    <h1>This is an example of Document write method !!</h1>
+        <button onclick="disp()">Click Me</button>
+</body>
+
+OR 
+METHOD 3:
+USE WINDOWS ALERT:
+
+<body>
+    <script>
+        document.write("This is an example");
+    </script>
+    <h1>This is an example of Document write method !!</h1>
+        <button onclick="window.alert('Error occurred!')">Click Me</button>
+</body>
+
+OR 
+METHOD 4:
+<body>
+    <script>
+        document.write("This is an example");
+    </script>
+    <h1>This is an example of Document write method !!</h1>
+        <button onclick="document.write('Example')">Click Me</button>
+</body>
+
+1) document.write
+2) window.alert
+3) console.log
+4) document.getElementById
+-->

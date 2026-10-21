@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+</head>
+<body>
+
+    <h1>Student Registration Form</h1>
+    <hr>
+
+    <form onsubmit="return validateForm()">
+
+        <label>Full Name:</label>
+        <input type="text" id="fullname">
+        <br><br>
+
+        <label>Email:</label>
+        <input type="text" id="email">
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" id="password">
+        <br><br>
+
+        <label>Phone Number:</label>
+        <input type="text" id="phone">
+        <br><br>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <br><br>
+
+        <label>Course:</label>
+        <select id="course">
+            <option value="">Select Course</option>
+            <option value="B.Tech">B.Tech</option>
+            <option value="BCA">BCA</option>
+            <option value="B.Sc">B.Sc</option>
+            <option value="MCA">MCA</option>
+        </select>
+        <br><br>
+
+        <input type="checkbox" id="agree">
+        <label>I agree to the Terms and Conditions</label>
+        <br><br>
+
+        <input type="submit" value="Register">
+        <input type="reset" value="Clear">
+
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        function validateForm() {
+
+            let name = document.getElementById("fullname").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let phone = document.getElementById("phone").value;
+            let gender = document.getElementsByName("gender");
+            let course = document.getElementById("course").value;
+            let agree = document.getElementById("agree").checked;
+
+            if (name == "") {
+                alert("Please enter your name");
+                return false;
+            }
+
+            if (!email.includes("@") || !email.includes(".")) {
+                alert("Please enter a valid email");
+                return false;
+            }
+
+            if (password.length < 6) {
+                alert("Password must have at least 6 characters");
+                return false;
+            }
+
+            if (phone.length != 10 || isNaN(phone)) {
+                alert("Phone number must contain 10 digits");
+                return false;
+            }
+
+            let selected = false;
+
+            for (let i = 0; i < gender.length; i++) {
+                if (gender[i].checked) {
+                    selected = true;
+                }
+            }
+
+            if (selected == false) {
+                alert("Please select your gender");
+                return false;
+            }
+
+            if (course == "") {
+                alert("Please select a course");
+                return false;
+            }
+
+            if (agree == false) {
+                alert("Please accept the Terms and Conditions");
+                return false;
+            }
+
+            alert("Registration Successful!");
+            return true;
+        }
+    </script>
+
+</body>
+</html>

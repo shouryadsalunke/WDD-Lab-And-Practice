@@ -1,0 +1,6 @@
+id,name,type,category,price_per_day,seats,transmission,fuel,image,description
+1,Porsche 911,Car,Sports Car,35000,2,Automatic,Petrol,images/porsche-911.jpg,A sports car for a special drive or a memorable weekend.
+2,BMW X5,SUV,Luxury SUV,12000,5,Automatic,Diesel,images/bmw-x5.jpg,A spacious SUV for comfortable city drives and road trips.
+3,Royal Enfield Classic 350,Bike,Cruiser Bike,1200,2,Manual,Petrol,images/classic-350.jpg,A classic motorcycle for relaxed rides and weekend escapes.
+4,Mercedes-Benz C-Class,Car,Luxury Sedan,9000,5,Automatic,Petrol,images/mercedes-c-class.jpg,A comfortable sedan with elegant styling.
+5,KTM Duke 390,Bike,Street Bike,1500,2,Manual,Petrol,images/ktm-duke-390.jpg,A sporty street bike for an exciting ride.

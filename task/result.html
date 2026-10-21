@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Result Input</title>
+
+    <link rel="stylesheet" href="result.css">
+
+    <style>
+
+        /* INTERNAL CSS */
+
+        .subject-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .subject-card::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: #35e6a4;
+        }
+
+        .calculated {
+            background: linear-gradient(
+                135deg,
+                #102d2b,
+                #0c211f
+            );
+            border-color: #2b8066;
+        }
+
+        .calculated input {
+            color: #35e6a4;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .result-display {
+            display: none;
+        }
+
+        .result-display.show {
+            display: grid;
+        }
+
+        .grade-box {
+            font-size: 40px;
+            font-weight: bold;
+            color: #35e6a4;
+        }
+
+        .error {
+            color: #ff6978;
+            font-size: 12px;
+            margin-top: 6px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<header class="header">
+
+    <div class="logo">
+        STUDENT<span>RESULT</span>
+    </div>
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="result.html" class="active">
+            Result Input
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="container">
+
+    <section class="page-heading">
+
+        <p>ACADEMIC RESULT PORTAL</p>
+
+        <h1>
+            Result Input
+        </h1>
+
+        <span>
+            Enter marks for six subjects and calculate the
+            final academic result.
+        </span>
+
+    </section>
+
+
+    <form id="resultForm">
+
+
+        <!-- STUDENT DETAILS -->
+
+        <section class="form-section">
+
+            <div class="section-title">
+
+                <span>01</span>
+
+                <div>
+                    <h2>Student Information</h2>
+                    <p>Enter basic student details</p>
+                </div>
+
+            </div>
+
+
+            <div class="form-grid">
+
+                <div class="input-group">
+
+                    <label>
+                        Student Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Enter student name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>
+                        Roll Number
+                    </label>
+
+                    <input
+                        type="text"
+                        id="rollNumber"
+                        placeholder="Enter roll number"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>
+                        Course
+                    </label>
+
+                    <select id="course">
+
+                        <option>B.Tech CSE</option>
+                        <option>B.Tech CSE-DS</option>
+                        <option>B.Tech IT</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>
+                        Semester
+                    </label>
+
+                    <select id="semester">
+
+                        <option>Semester I</option>
+                        <option>Semester II</option>
+                        <option>Semester III</option>
+                        <option>Semester IV</option>
+                        <option>Semester V</option>
+                        <option>Semester VI</option>
+                        <option>Semester VII</option>
+                        <option>Semester VIII</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SUBJECT MARKS -->
+
+        <section class="form-section">
+
+            <div class="section-title">
+
+                <span>02</span>
+
+                <div>
+
+                    <h2>
+                        Subject Marks
+                    </h2>
+
+                    <p>
+                        Each subject has two components,
+                        each out of 100.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="subjects">
+
+
+                <!-- SUBJECT 1 -->
+
+                <div class="subject-card">
+
+                    <div class="subject-header">
+
+                        <div>
+
+                            <span class="subject-number">
+                                01
+                            </span>
+
+                            <h3>
+                                Data Structures
+                            </h3>
+
+                        </div>
+
+                        <span>
+                            Maximum: 200
+                        </span>
+
+                    </div>
+
+
+                    <div class="marks-row">
+
+                        <div class="mark-box">
+
+                            <label>
+                                Internal / 100
+                            </label>
+
+                            <input
+                                type="number"
+                                id="marks1a"
+                                min="0"
+                                max="100"
+                                placeholder="00"
+                            >
+
+                        </div>
+
+
+                        <div class="plus">
+                            +
+                        </div>
+
+
+                        <div class="mark-box">
+
+                            <label>
+                                External / 100
+                            </label>
+
+                            <input
+                                type="number"
+                                id="marks1b"
+                                min="0"
+                                max="100"
+                                placeholder="00"
+                            >
+
+                        </div>
+
+
+                        <div class="equal">
+                            =
+                        </div>
+
+
+                        <div class="mark-box calculated">
+
+                            <label>
+                                Total / 200
+                            </label>
+
+                            <input
+                                type="text"
+                                id="total1"
+                                value="0"
+                                readonly
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SUBJECT 2 -->
+
+                <div class="subject-card">
+
+                    <div class="subject-header">
+
+                        <div>
+                            <span class="subject-number">02</span>
+                            <h3>Database Management</h3>
+                        </div>
+
+                        <span>Maximum: 200</span>
+
+                    </div>
+
+
+                    <div class="marks-row">
+
+                        <div class="mark-box">
+                            <label>Internal / 100</label>
+                            <input type="number" id="marks2a"
+                                   min="0" max="100" placeholder="00">
+                        </div>
+
+                        <div class="plus">+</div>
+
+                        <div class="mark-box">
+                            <label>External / 100</label>
+                            <input type="number" id="marks2b"
+                                   min="0" max="100" placeholder="00">
+                        </div>
+
+                        <div class="equal">=</div>
+
+                        <div class="mark-box calculated">
+                            <label>Total / 200</label>
+                            <input type="text" id="total2"
+                                   value="0" readonly>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SUBJECT 3 -->
+
+                <div class="subject-card">
+
+                    <div class="subject-header">
+
+                        <div>
+                            <span class="subject-number">03</span>
+                            <h3>Operating Systems</h3>
+                        </div>
+
+                        <span>Maximum: 200</span>
+
+                    </div>
+
+
+                    <div class="marks-row">
+
+                        <div class="mark-box">
+                            <label>Internal / 100</label>
+                            <input type="number" id="marks3a"
+                                   min="0" max="100" placeholder="00">
+                        </div>
+
+                        <div class="plus">+</div>
+
+                        <div class="mark-box">
+                            <label>External / 100</label>
+                            <input type="number" id="marks3b"
+                                   min="0" max="100" placeholder="00">
+                        </div>
+
+                        <div class="equal">=</div>
+
+                        <div class="mark-box calculated">
+                            <label>Total / 200</label>
+                            <input type="text" id="total3"
+                                   value="0" readonly>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SUBJECT 4 -->
+
+                <div class="subject-card">
+
+                    <div class="subject-header">
+
+                        <div>
+                            <span class="subject-number">04</span>
+                            <h3>Computer Networks</h3>
+                        </div>
+
+                        <span>Maximum: 200</span>
+
+                    </div>
+
+
+                    <div class="marks-row">
+
+                        <div class="mark-box">
+                            <label>Internal / 100</label>
+                            <input type="number" id="marks4a"
+                                   min="0" max="100" placeholder="00">
+                        </div>
+
+                        <div class="plus">+</div>
+
+                        <div class="mark-box">
+                            <label>External / 100</label>
+                            <input type="number" id="marks4b"
+                                   min="0" max="100" placeholder="00">
+                        </div>
+
+                        <div class="equal">=</div>
+
+                        <div class="mark-box calculated">
+                            <label>Total / 200</label>
+                            <input type="text" id="total4"
+                                   value="0" readonly>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SUBJECT 5 -->
+
+                <div class="subject-card">
+
+                    <div class="subject-header">
+
+                        <div>
+                            <span class="subject-number">05</span>
+                            <h3>Web Technologies</h3>
+                        </div>
+
+                        <span>Maximum: 200</span>
+
+                    </div>
+
+
+                    <div class="marks-row">
+
+                        <div class="mark-box">
+                            <label>Internal / 100</label>
+                            <input type="number" id="marks5a"
+                                   min="0" max="100" placeholder="00">
+                        </div>
+
+                        <div class="plus">+</div>
+
+                        <div class="mark-box">
+                            <label>External / 100</label>
+                            <input type="number" id="marks5b"
+                                   min="0" max="100" placeholder="00">
+                        </div>
+
+                        <div class="equal">=</div>
+
+                        <div class="mark-box calculated">
+                            <label>Total / 200</label>
+                            <input type="text" id="total5"
+                                   value="0" readonly>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SUBJECT 6 -->
+
+                <div class="subject-card">
+
+                    <div class="subject-header">
+
+                        <div>
+                            <span class="subject-number">06</span>
+                            <h3>Artificial Intelligence</h3>
+                        </div>
+
+                        <span>Maximum: 200</span>
+
+                    </div>
+
+
+                    <div class="marks-row">
+
+                        <div class="mark-box">
+                            <label>Internal / 100</label>
+                            <input type="number" id="marks6a"
+                                   min="0" max="100" placeholder="00">
+                        </div>
+
+                        <div class="plus">+</div>
+
+                        <div class="mark-box">
+                            <label>External / 100</label>
+                            <input type="number" id="marks6b"
+                                   min="0" max="100" placeholder="00">
+                        </div>
+
+                        <div class="equal">=</div>
+
+                        <div class="mark-box calculated">
+                            <label>Total / 200</label>
+                            <input type="text" id="total6"
+                                   value="0" readonly>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- BUTTON -->
+
+        <div class="submit-area">
+
+            <button type="submit">
+                CALCULATE RESULT
+            </button>
+
+            <button type="reset" class="reset-button">
+                RESET
+            </button>
+
+        </div>
+
+
+    </form>
+
+
+
+    <!-- RESULT -->
+
+    <section id="resultDisplay" class="result-display">
+
+        <div class="result-header">
+
+            <div>
+
+                <p>FINAL RESULT</p>
+
+                <h2>
+                    Academic Performance
+                </h2>
+
+            </div>
+
+            <div class="grade-box" id="grade">
+                -
+            </div>
+
+        </div>
+
+
+        <div class="result-grid">
+
+            <div class="result-item">
+
+                <span>
+                    Student
+                </span>
+
+                <strong id="displayName">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="result-item">
+
+                <span>
+                    Roll Number
+                </span>
+
+                <strong id="displayRoll">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="result-item">
+
+                <span>
+                    Total Marks
+                </span>
+
+                <strong>
+                    <span id="grandTotal">0</span>
+                    / 1200
+                </strong>
+
+            </div>
+
+
+            <div class="result-item">
+
+                <span>
+                    Percentage
+                </span>
+
+                <strong id="percentage">
+                    0%
+                </strong>
+
+            </div>
+
+
+            <div class="result-item">
+
+                <span>
+                    Grade
+                </span>
+
+                <strong id="gradeText">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="result-item">
+
+                <span>
+                    Status
+                </span>
+
+                <strong id="status">
+                    -
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="grade-scale">
+
+            <h3>
+                Grading Scale
+            </h3>
+
+            <div class="grade-list">
+
+                <span>A+ : 90–100%</span>
+                <span>A : 80–89%</span>
+                <span>B+ : 70–79%</span>
+                <span>B : 60–69%</span>
+                <span>C : 50–59%</span>
+                <span>F : Below 50%</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    Student Result Management System © 2026
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

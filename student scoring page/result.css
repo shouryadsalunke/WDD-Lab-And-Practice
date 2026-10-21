@@ -1,0 +1,39 @@
+body {
+    background-color: #f4f6f8;
+    font-family: Arial;
+    margin: 0;
+}
+.header {
+    background-color: #1f4e79;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.marks-section {
+    background-color: white;
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+}
+h2 {
+    color: #1f4e79;
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+input {
+    padding: 8px;
+    width: 100px;
+}
+.calculate-button {
+    background-color: #1f4e79;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    margin: 20px;
+}

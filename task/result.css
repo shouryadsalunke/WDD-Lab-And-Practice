@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #06101c;
+    color: #ffffff;
+}
+
+.header {
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #091827;
+    border-bottom: 1px solid #20364c;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #35e6a4;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #879bad;
+    font-size: 14px;
+}
+
+nav a:hover,
+nav a.active {
+    color: #35e6a4;
+}
+
+.container {
+    width: 86%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 55px 0 80px;
+}
+
+.page-heading {
+    margin-bottom: 45px;
+}
+
+.page-heading p {
+    color: #35e6a4;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.page-heading h1 {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.page-heading span {
+    color: #8ca0b3;
+    font-size: 15px;
+}
+
+.form-section {
+    padding: 30px;
+    margin-bottom: 25px;
+    border: 1px solid #203950;
+    background: #0b1928;
+    border-radius: 18px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.section-title > span {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #12352e;
+    color: #35e6a4;
+    font-weight: bold;
+}
+
+.section-title h2 {
+    font-size: 21px;
+}
+
+.section-title p {
+    color: #788da0;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    color: #9db0c2;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 14px;
+    border-radius: 9px;
+    border: 1px solid #2a4258;
+    background: #07131f;
+    color: white;
+    outline: none;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #35e6a4;
+    box-shadow: 0 0 0 3px rgba(53, 230, 164, 0.08);
+}
+
+.subjects {
+    display: grid;
+    gap: 18px;
+}
+
+.subject-card {
+    padding: 24px;
+    border-radius: 14px;
+    border: 1px solid #213b52;
+    background: #081522;
+}
+
+.subject-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.subject-header h3 {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 17px;
+}
+
+.subject-header > span:last-child {
+    color: #657b8e;
+    font-size: 11px;
+}
+
+.subject-number {
+    color: #35e6a4;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.marks-row {
+    display: grid;
+    grid-template-columns: 1fr 35px 1fr 35px 1fr;
+    align-items: end;
+    gap: 12px;
+}
+
+.mark-box {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.mark-box label {
+    font-size: 11px;
+    color: #8195a8;
+    text-transform: uppercase;
+}
+
+.mark-box input {
+    width: 100%;
+    height: 48px;
+    padding: 10px;
+    background: #07111c;
+    border: 1px solid #294259;
+    border-radius: 8px;
+    color: white;
+    outline: none;
+    font-size: 17px;
+}
+
+.mark-box input:focus {
+    border-color: #35e6a4;
+}
+
+.plus,
+.equal {
+    text-align: center;
+    color: #35e6a4;
+    font-size: 22px;
+    padding-bottom: 12px;
+}
+
+.submit-area {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 35px 0;
+}
+
+.submit-area button {
+    border: none;
+    border-radius: 9px;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: .5px;
+    background: #35e6a4;
+    color: #04110d;
+}
+
+.submit-area button:hover {
+    transform: translateY(-2px);
+}
+
+.submit-area .reset-button {
+    background: #16283a;
+    color: #a7b8c8;
+    border: 1px solid #294158;
+}
+
+.result-display {
+    padding: 30px;
+    border: 1px solid #28455d;
+    background: linear-gradient(
+        145deg,
+        #0d2132,
+        #081522
+    );
+    border-radius: 20px;
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #254057;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+
+.result-header p {
+    color: #35e6a4;
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.result-header h2 {
+    margin-top: 8px;
+    font-size: 26px;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.result-item {
+    padding: 20px;
+    background: #091725;
+    border: 1px solid #1d344a;
+    border-radius: 12px;
+}
+
+.result-item span {
+    display: block;
+    color: #73899c;
+    font-size: 11px;
+    margin-bottom: 9px;
+    text-transform: uppercase;
+}
+
+.result-item strong {
+    font-size: 20px;
+}
+
+.grade-scale {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #223b51;
+}
+
+.grade-scale h3 {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.grade-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.grade-list span {
+    padding: 9px 13px;
+    background: #102638;
+    border-radius: 7px;
+    color: #9fb1c1;
+    font-size: 11px;
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+    border-top: 1px solid #1b3045;
+    color: #63798b;
+    font-size: 12px;
+}
+
+@media (max-width: 800px) {
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .marks-row {
+        grid-template-columns: 1fr;
+    }
+
+    .plus,
+    .equal {
+        display: none;
+    }
+
+    .result-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .header {
+        padding: 20px;
+    }
+
+    .page-heading h1 {
+        font-size: 38px;
+    }
+
+    .form-section {
+        padding: 20px;
+    }
+
+    .result-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrepMate - Question Bank</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div>
+            <h1>PrepMate</h1>
+            <p>Your personal question bank</p>
+        </div>
+        <button onclick="showSection('dashboard')">Home</button>
+    </header>
+
+    <nav>
+        <button onclick="showSection('dashboard')">Dashboard</button>
+        <button onclick="showSection('add')">Add Questions</button>
+        <button onclick="showSection('bank')">Question Bank</button>
+        <button onclick="showSection('quizSetup')">Take a Quiz</button>
+    </nav>
+
+    <main>
+        <section id="dashboard" class="section">
+            <h2>Welcome to PrepMate!</h2>
+            <p>Organize your questions. Practise. Improve.</p>
+
+            <div class="stats">
+                <div class="card">
+                    <h3>Total Questions</h3>
+                    <p id="totalQuestions">0</p>
+                </div>
+                <div class="card">
+                    <h3>Quizzes Attempted</h3>
+                    <p id="totalQuizzes">0</p>
+                </div>
+                <div class="card">
+                    <h3>Latest Score</h3>
+                    <p id="latestScore">Not attempted</p>
+                </div>
+            </div>
+
+            <h3>Upload Questions from CSV</h3>
+            <p>Use the sample CSV format provided with this project.</p>
+            <input type="file" id="csvFile" accept=".csv">
+            <button onclick="uploadCSV()">Upload Questions</button>
+            <p id="uploadMessage"></p>
+
+            <h3>Recent Questions</h3>
+            <div id="recentQuestions"></div>
+        </section>
+
+        <section id="add" class="section hidden">
+            <h2 id="formHeading">Add a Question</h2>
+
+            <form id="questionForm">
+                <label for="question">Question</label>
+                <textarea id="question" required placeholder="Enter your question"></textarea>
+
+                <label for="optionA">Option A</label>
+                <input type="text" id="optionA" required>
+
+                <label for="optionB">Option B</label>
+                <input type="text" id="optionB" required>
+
+                <label for="optionC">Option C</label>
+                <input type="text" id="optionC" required>
+
+                <label for="optionD">Option D</label>
+                <input type="text" id="optionD" required>
+
+                <label for="correctAnswer">Correct Answer</label>
+                <select id="correctAnswer">
+                    <option value="A">Option A</option>
+                    <option value="B">Option B</option>
+                    <option value="C">Option C</option>
+                    <option value="D">Option D</option>
+                </select>
+
+                <label for="explanation">Answer Explanation</label>
+                <textarea id="explanation" required placeholder="Explain the answer"></textarea>
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" required placeholder="e.g. Python">
+
+                <label for="topic">Topic</label>
+                <input type="text" id="topic" required placeholder="e.g. Loops">
+
+                <label for="difficulty">Difficulty</label>
+                <select id="difficulty">
+                    <option value="Easy">Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Hard">Hard</option>
+                </select>
+
+                <button type="submit" id="saveButton">Save Question</button>
+                <button type="button" class="secondary" onclick="resetForm()">Clear Form</button>
+            </form>
+        </section>
+
+        <section id="bank" class="section hidden">
+            <h2>Question Bank</h2>
+
+            <input type="text" id="searchQuestion"
+                   placeholder="Search questions..."
+                   oninput="showQuestions()">
+
+            <div class="filters">
+                <select id="filterSubject" onchange="showQuestions()">
+                    <option value="All">All Subjects</option>
+                </select>
+
+                <select id="filterDifficulty" onchange="showQuestions()">
+                    <option value="All">All Difficulties</option>
+                    <option value="Easy">Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Hard">Hard</option>
+                </select>
+            </div>
+
+            <div id="questionList"></div>
+        </section>
+
+        <section id="quizSetup" class="section hidden">
+            <h2>Start a Practice Quiz</h2>
+
+            <label for="quizSubject">Subject</label>
+            <select id="quizSubject">
+                <option value="All">All Subjects</option>
+            </select>
+
+            <label for="quizTopic">Topic (optional)</label>
+            <input type="text" id="quizTopic" placeholder="Leave blank for all topics">
+
+            <label for="quizDifficulty">Difficulty</label>
+            <select id="quizDifficulty">
+                <option value="All">All Difficulties</option>
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Hard">Hard</option>
+            </select>
+
+            <label for="quizCount">Number of Questions</label>
+            <input type="number" id="quizCount" min="1" value="5">
+
+            <label for="quizTime">Time Limit (minutes)</label>
+            <input type="number" id="quizTime" min="1" value="5">
+
+            <button onclick="startQuiz()">Start Quiz</button>
+            <p id="quizMessage"></p>
+        </section>
+
+        <section id="quiz" class="section hidden">
+            <div class="quizHeader">
+                <h2>Practice Quiz</h2>
+                <p id="timer">Time: 05:00</p>
+            </div>
+
+            <p id="quizProgress"></p>
+            <div id="quizQuestions"></div>
+
+            <button onclick="submitQuiz()">Submit Quiz</button>
+        </section>
+
+        <section id="results" class="section hidden">
+            <h2>Quiz Results</h2>
+            <h3 id="score"></h3>
+            <p id="scoreMessage"></p>
+            <div id="answerReview"></div>
+            <button onclick="showSection('quizSetup')">Try Again</button>
+            <button class="secondary" onclick="showSection('dashboard')">Dashboard</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>PrepMate &copy; 2026 | Learn at your own pace.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+
+<body>
+    <h1>Students Result Page</h1>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <br><br>
+        <hr>
+        <label for="marks1">Marks in subject 1:</label>
+        <input type="number" id="marks1" name="marks1">
+        <br><br>
+        <label for="marks2">Marks in subject 2:</label>
+        <input type="number" id="marks2" name="marks2">
+        <br><br>
+        <label for="marks3">Marks in subject 3:</label>
+        <input type="number" id="marks3" name="marks3">
+        <br><br>
+        <button onclick="calculateResult()">Calculate Result</button>
+        <p id="result"></p>
+
+        <script>
+            function calculateResult() {
+    let name = document.getElementById("name").value;
+    let m1 = Number(document.getElementById("marks1").value);
+    let m2 = Number(document.getElementById("marks2").value);
+    let m3 = Number(document.getElementById("marks3").value);
+
+    let total = m1 + m2 + m3;
+    let percentage = total / 3;
+
+    let grade;
+
+    if (percentage >= 90) {
+        grade = "A";
+    } else if (percentage >= 80) {
+        grade = "B";
+    } else if (percentage >= 70) {
+        grade = "C";
+    } else if (percentage >= 60) {
+        grade = "D";
+    } else {
+        grade = "F";
+    }
+
+    document.getElementById("result").innerHTML =
+        "Name: " + name + "<br>" +
+        "Total: " + total + "<br>" +
+        "Percentage: " + percentage + "<br>" +
+        "Grade: " + grade;
+}
+        </script>
+</body>
+</html>

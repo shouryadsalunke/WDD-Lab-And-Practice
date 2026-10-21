@@ -1,0 +1,43 @@
+body {
+    background-color: #f4f6f8;
+    font-family: Arial;
+    text-align: center;     
+    margin: 0;
+}
+header, footer {
+    background-color: #1f4e79;
+    color: white;
+    padding: 20px;
+}
+img {
+    width: 95%;
+    height: 250px;
+    margin: 20px;
+    text-align: center;
+}
+section {
+    background-color: white;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+}
+table {
+    width: 100%;
+}
+th {
+    background-color: #1f4e79;
+    color: white;
+}
+td, th {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+.important-box {
+    background-color: #d6eaf8;
+    padding: 10px;
+}
+button {
+    background-color: #1f4e79;
+    color: white;
+    padding: 10px 20px;
+}

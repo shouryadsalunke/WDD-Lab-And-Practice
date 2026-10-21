@@ -1,0 +1,64 @@
+
+question,optionA,optionB,optionC,optionD,correctAnswer,explanation,subject,topic,difficulty
+"What does HTML stand for?","Hyper Text Markup Language","High Text Machine Language","Hyper Transfer Markup Language","Home Tool Markup Language",A,"HTML stands for Hyper Text Markup Language and structures web pages.",Web Development,HTML,Easy
+"Which tag creates a hyperlink?","<img>","<a>","<p>","<link>",B,"The anchor tag creates hyperlinks.",Web Development,HTML,Easy
+"Which tag inserts an image?","<picture>","<image>","<img>","<src>",C,"The img tag embeds an image in a webpage.",Web Development,HTML,Easy
+"Which attribute specifies an image source?","href","alt","src","target",C,"The src attribute specifies the image file location.",Web Development,HTML,Easy
+"Which tag creates an unordered list?","<ol>","<ul>","<li>","<list>",B,"The ul tag creates a bulleted list.",Web Development,HTML,Easy
+"Which tag creates the largest standard heading?","<h6>","<head>","<heading>","<h1>",D,"The h1 tag represents the highest-level standard HTML heading.",Web Development,HTML,Easy
+"Which attribute provides alternative text for an image?","title","alt","name","text",B,"The alt attribute describes an image when it cannot be displayed and helps accessibility.",Web Development,HTML,Easy
+"Which tag creates a table row?","<td>","<th>","<tr>","<table-row>",C,"The tr tag defines a table row.",Web Development,HTML,Easy
+"Which input type hides typed characters?","text","password","hidden-text","private",B,"The password input type masks the characters entered by the user.",Web Development,HTML,Easy
+"Which attribute connects a label to an input using its id?","for","class","src","action",A,"The label for attribute matches the input element id.",Web Development,HTML,Medium
+"What does CSS stand for?","Computer Style Sheets","Creative Style System","Cascading Style Sheets","Colorful Styling Syntax",C,"CSS stands for Cascading Style Sheets and controls webpage appearance.",Web Development,CSS,Easy
+"Which CSS property changes text colour?","font-style","color","background","text-size",B,"The color property sets the foreground text colour.",Web Development,CSS,Easy
+"Which selector targets an element with id main?"," .main","#main","main#","*main",B,"An id selector begins with the hash symbol.",Web Development,CSS,Easy
+"Which selector targets elements with class card?","#card","card",".card","@card",C,"A class selector begins with a dot.",Web Development,CSS,Easy
+"Which property changes the background colour?","background-color","font-color","text-background","color-fill",A,"The background-color property sets an element background colour.",Web Development,CSS,Easy
+"Which CSS layout system uses display flex?","Grid only","Flexbox","Float layout","Table layout",B,"Flexbox arranges elements along a flexible row or column.",Web Development,CSS,Easy
+"Which property adds space inside an element border?","margin","outline","padding","gap-only",C,"Padding is the space between content and its border.",Web Development,CSS,Easy
+"Which property adds space outside an element border?","padding","margin","width","border-spacing-only",B,"Margin creates space outside an element border.",Web Development,CSS,Easy
+"Which property rounds element corners?","corner-style","border-round","radius","border-radius",D,"The border-radius property rounds the corners of an element.",Web Development,CSS,Easy
+"Which rule applies styles based on screen width?","@screen","@media","@responsive","@device",B,"Media queries allow responsive styles based on viewport and device conditions.",Web Development,CSS,Medium
+"Which keyword declares a block-scoped variable that can be reassigned?","const","static","let","define",C,"let declares a block-scoped variable that can be reassigned.",JavaScript,Basics,Easy
+"Which operator checks strict equality?","=","==","===","!=",C,"The strict equality operator compares values without automatic type conversion.",JavaScript,Operators,Easy
+"What does typeof 42 return?","number","integer","float","numeric",A,"JavaScript classifies the number 42 as type number.",JavaScript,Data Types,Easy
+"Which symbol starts a single-line comment in JavaScript?","<!--","##","//","**",C,"Two forward slashes start a single-line JavaScript comment.",JavaScript,Syntax,Easy
+"Which method selects an element using its id?","document.queryAll()","document.getElementById()","document.getId()","document.findId()",B,"getElementById selects an element by its id.",JavaScript,DOM,Easy
+"Which event occurs when a user clicks a button?","onchange","onload","onclick","onhover",C,"The click event runs a handler when an element is clicked.",JavaScript,Events,Easy
+"What does an array store?","Only functions","A collection of values","Only numbers","Only text",B,"An array stores an ordered collection of values.",JavaScript,Arrays,Easy
+"Which method adds an element to the end of an array?","pop()","shift()","push()","remove()",C,"push adds one or more elements to the end of an array.",JavaScript,Arrays,Easy
+"What does JSON.stringify() do?","Converts an object to a JSON string","Deletes an object","Sorts an array","Converts text into HTML",A,"JSON.stringify serializes a JavaScript value into a JSON string.",JavaScript,JSON,Medium
+"Which browser storage option can store key-value strings across page reloads?","localStorage","console.log","alert","prompt",A,"localStorage persists key-value strings in the browser until removed or cleared.",JavaScript,Storage,Easy
+"Which keyword defines a function in Python?","func","define","def","function",C,"The def keyword defines a function in Python.",Python,Functions,Easy
+"What is the result of len([10, 20, 30])?","2","3","10","30",B,"The list contains three elements, so len returns 3.",Python,Lists,Easy
+"Which data type stores True or False?","str","bool","list","dict",B,"The bool type represents Boolean values True and False.",Python,Data Types,Easy
+"What is the result of 7 // 2?","3.5","4","3","2",C,"Floor division returns the quotient rounded down, which is 3.",Python,Operators,Easy
+"Which symbol is used for exponentiation in Python?","^","**","//","%%",B,"The double asterisk operator raises a number to a power.",Python,Operators,Easy
+"Which method adds an item to the end of a list?","add()","insertEnd()","append()","push()",C,"The append method adds an item to the end of a Python list.",Python,Lists,Easy
+"Which collection stores unique elements?","list","tuple","set","string",C,"A set stores distinct elements without duplicates.",Python,Sets,Easy
+"Which brackets are commonly used to create a dictionary literal?","[]","{}","()","<>",B,"A Python dictionary literal uses curly braces with key-value pairs.",Python,Dictionaries,Easy
+"Which statement is used to handle exceptions?","try-except","if-else only","for-while","define-return",A,"A try-except block handles specified exceptions.",Python,Exception Handling,Medium
+"What does range(5) produce when iterated?","1 to 5","0 to 4","0 to 5","1 to 4",B,"range(5) generates integers starting at 0 and ending before 5.",Python,Loops,Easy
+"What is the time complexity of binary search on a sorted array?","O(n)","O(log n)","O(n squared)","O(1) always",B,"Binary search halves the search space at each step.",DSA,Searching,Medium
+"Which data structure follows FIFO?","Stack","Queue","Tree","Graph",B,"A queue follows first in first out order.",DSA,Queue,Easy
+"Which data structure follows LIFO?","Queue","Stack","Linked list only","Graph",B,"A stack follows last in first out order.",DSA,Stack,Easy
+"Which operation adds an element to a stack?","Enqueue","Dequeue","Push","Search",C,"Push adds an element to the top of a stack.",DSA,Stack,Easy
+"What is the worst-case time complexity of linear search?","O(1)","O(log n)","O(n)","O(n squared)",C,"Linear search may inspect every element.",DSA,Searching,Easy
+"In a singly linked list, each node usually stores what?","Only an index","Data and a next pointer","Two previous pointers","Only a key",B,"A singly linked list node stores data and a reference to the next node.",DSA,Linked Lists,Easy
+"Which traversal visits the root before its subtrees?","Inorder","Postorder","Preorder","Level order only",C,"Preorder traversal visits root, then left subtree, then right subtree.",DSA,Trees,Medium
+"Which data structure is commonly used in breadth-first search?","Stack","Queue","Heap only","Hash string",B,"Breadth-first search uses a queue to explore nodes level by level.",DSA,Graphs,Medium
+"What is the worst-case search time in an unbalanced binary search tree?","O(1)","O(log n) always","O(n)","O(n log n) always",C,"An unbalanced tree can become a chain, requiring a linear search.",DSA,Trees,Medium
+"Which sorting algorithm repeatedly selects the smallest remaining element?","Merge sort","Selection sort","Insertion sort","Quick sort",B,"Selection sort repeatedly selects the minimum from the unsorted portion.",DSA,Sorting,Easy
+"Which SQL command retrieves data from a table?","GET","OPEN","SELECT","FETCHTABLE",C,"SELECT retrieves rows and columns from database tables.",Databases,SQL,Easy
+"Which SQL clause filters rows using a condition?","ORDER BY","WHERE","GROUP BY","SELECT",B,"WHERE filters rows according to a condition.",Databases,SQL,Easy
+"Which SQL command inserts a new row?","ADD ROW","INSERT INTO","UPDATE TABLE","CREATE ROW",B,"INSERT INTO adds new records to a table.",Databases,SQL,Easy
+"Which SQL clause sorts query results?","SORT","ORDER BY","ARRANGE","GROUP BY",B,"ORDER BY sorts results by one or more columns.",Databases,SQL,Easy
+"Which key uniquely identifies a row in a table?","Foreign key","Duplicate key","Primary key","Optional key",C,"A primary key uniquely identifies each row in a table.",Databases,Keys,Easy
+"Which SQL function counts rows?","SUM()","TOTAL()","COUNT()","NUMBER()",C,"COUNT returns the number of rows or non-null values depending on its argument.",Databases,SQL,Easy
+"What does DBMS stand for?","Database Management System","Data Backup Memory Software","Digital Base Management Service","Database Machine Setup",A,"A DBMS is software used to create, manage and query databases.",Computer Fundamentals,DBMS,Easy
+"Which component executes program instructions?","CPU","Monitor","Keyboard","Printer",A,"The CPU processes instructions and performs computations.",Computer Fundamentals,Hardware,Easy
+"Which memory is generally volatile?","ROM","SSD","RAM","DVD",C,"RAM generally loses its stored contents when power is removed.",Computer Fundamentals,Memory,Easy
+"Which number system uses only 0 and 1?","Decimal","Octal","Binary","Hexadecimal",C,"The binary number system uses the digits 0 and 1.",Computer Fundamentals,Number Systems,Easy
+"Which protocol is commonly used to access secure websites?","HTTP only","HTTPS","FTP only","SMTP",B,"HTTPS uses encryption to protect communication between a browser and website.",Computer Fundamentals,Networking,Easy
+"Which device forwards packets between different networks?","Keyboard","Router","Scanner","Monitor",B,"A router forwards packets between networks.",Computer Fundamentals,Networking,Easy

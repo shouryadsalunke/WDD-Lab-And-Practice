@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Grade</title>
+    <link rel="stylesheet" href="result.css">
+    <style>
+        .result-section {
+            background-color: white;
+            width: 80%;
+            margin: 30px auto;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .result-section h2 {
+            color: #8e44ad;
+            text-align: center;
+        }
+        .result-box {
+            background-color: #e8daef;
+            padding: 20px;
+            border-left: 6px solid #8e44ad;
+            margin-top: 20px;
+        }
+        .result-box p {
+            font-size: 18px;
+            color: #444;
+        }
+        .result-box span {
+            color: #8e44ad;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Calculate Your Grade</h1>
+        <p>Enter your marks and calculate your result</p>
+    </header>
+    <section class="marks-section">
+        <h2 color: #1f4e79;>Enter the Marks</h2>
+        <form id="resultForm">
+            <table>
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>Course Name</th>
+                    <th>Internal Marks</th>
+                    <th>External Marks</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Data Structures</td>
+                    <td>
+                        <input type="number" id="internal1" min="0" max="100" placeholder="Enter marks" required>
+                    </td>
+                    <td>
+                        <input type="number" id="external1" min="0" max="100" placeholder="Enter marks" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Probability And Statistics</td>
+                    <td>
+                        <input type="number" id="internal2" min="0" max="100" placeholder="Enter marks" required>
+                    </td>
+                    <td>
+                        <input type="number" id="external2" min="0" max="100" placeholder="Enter marks" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Software Engineering</td>
+                    <td>
+                        <input type="number" id="internal3" min="0" max="100" placeholder="Enter marks" required>
+                    </td>
+                    <td>
+                        <input type="number" id="external3" min="0" max="100" placeholder="Enter marks" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Web Development</td>
+                    <td>
+                        <input type="number" id="internal4" min="0" max="100" placeholder="Enter marks" required>
+                    </td>
+                    <td>
+                        <input type="number" id="external4" min="0" max="100" placeholder="Enter marks" required>
+                    </td>
+                </tr>
+            </table>
+            <button type="submit" class="calculate-button">
+                CALCULATE GRADE
+            </button>
+        </form>
+    </section>
+    <section class="result-section" id="resultSection" style="display: none;">
+        <h2 color: #1f4e79;>Final Result</h2>
+        <div class="result-box">
+            <p>
+                Total Marks:
+                <span id="totalMarks">0</span>
+                / 400
+            </p>
+            <p>
+                Percentage:
+                <span id="percentage">0</span>%
+            </p>
+            <p>
+                Grade:
+                <span id="grade">-</span>
+            </p>
+            <p>
+                Result:
+                <span id="status">-</span>
+            </p>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

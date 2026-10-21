@@ -1,0 +1,268 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f6f7f1;
+    color: #303a32;
+}
+
+header {
+    background-color: #e4eee1;
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+header h1 {
+    margin: 0;
+    color: #456b4d;
+}
+
+header p {
+    margin-bottom: 0;
+}
+
+nav {
+    background-color: white;
+    padding: 12px 7%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-bottom: 1px solid #e3e7df;
+}
+
+button {
+    padding: 11px 16px;
+    border: none;
+    border-radius: 7px;
+    background-color: #527b59;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #3d6244;
+}
+
+nav button {
+    background-color: #edf2e9;
+    color: #35543b;
+}
+
+nav button:hover {
+    background-color: #dce8d7;
+}
+
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+    min-height: 60vh;
+}
+
+.section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #243c1c0d;
+}
+
+.hidden {
+    display: none;
+}
+
+h2 {
+    color: #456b4d;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.card {
+    background-color: #f0f5eb;
+    padding: 18px;
+    border-radius: 10px;
+}
+
+.card h3 {
+    font-size: 15px;
+}
+
+.card p {
+    font-size: 25px;
+    font-weight: bold;
+    color: #456b4d;
+    overflow-wrap: anywhere;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #d5ddd2;
+    border-radius: 7px;
+    font: inherit;
+    background-color: white;
+    color: #303a32;
+}
+
+textarea {
+    min-height: 85px;
+    resize: vertical;
+}
+
+form button {
+    margin-top: 20px;
+}
+
+.secondary {
+    background-color: #e9eee6;
+    color: #35543b;
+    margin: 8px 0;
+}
+
+.secondary:hover {
+    background-color: #dbe4d7;
+}
+
+.filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 15px 0;
+}
+
+.questionCard {
+    border: 1px solid #e0e7dc;
+    background-color: #fcfdf9;
+    border-radius: 9px;
+    padding: 16px;
+    margin: 14px 0;
+    overflow-wrap: anywhere;
+}
+
+.questionCard h3 {
+    margin-top: 0;
+}
+
+.questionCard p {
+    line-height: 1.6;
+}
+
+.questionMeta {
+    color: #637664;
+    font-size: 13px;
+}
+
+.questionCard button {
+    margin: 5px 5px 0 0;
+}
+
+.quizHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#timer {
+    font-weight: bold;
+    color: #a14d3c;
+    font-size: 18px;
+}
+
+.quizQuestion {
+    padding: 18px 0;
+    border-bottom: 1px solid #e2e8de;
+}
+
+.quizQuestion h3 {
+    line-height: 1.5;
+}
+
+.quizOption {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 11px;
+    margin: 8px 0;
+    background-color: #f5f7f1;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.quizOption input {
+    width: auto;
+    margin-top: 3px;
+}
+
+.reviewCard {
+    border-left: 4px solid #d3a06a;
+    background-color: #faf8f1;
+    padding: 15px;
+    margin: 15px 0;
+    overflow-wrap: anywhere;
+}
+
+.reviewCorrect {
+    border-left-color: #52845a;
+}
+
+.reviewWrong {
+    border-left-color: #c46d60;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #687466;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 18px;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    nav {
+        padding: 12px 18px;
+    }
+
+    main {
+        padding: 0 12px;
+        margin: 18px auto;
+    }
+
+    .section {
+        padding: 17px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        grid-template-columns: 1fr;
+    }
+}
